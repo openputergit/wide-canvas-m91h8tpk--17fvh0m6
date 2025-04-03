@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Materials & Discussion | Student Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .discussion-card:hover {
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="font-bold text-xl text-blue-600">StudentCompanion</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 rounded-full hover:bg-gray-100">
+                        <i class="bi bi-person-circle text-xl"></i>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-gray-100">
+                        <i class="bi bi-moon text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Study Materials & Discussion</h1>
+            <p class="text-gray-600 mt-2">Access study resources and engage in academic discussions</p>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="flex flex-wrap gap-4 mb-8">
+            <div class="flex-1">
+                <input type="text" placeholder="Search materials..." class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <select class="px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">All Departments</option>
+                <option value="cs">Computer Science</option>
+                <option value="ee">Electrical Engineering</option>
+                <option value="me">Mechanical Engineering</option>
+            </select>
+            <select class="px-4 py-2 rounded-lg border focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="">All Semesters</option>
+                <option value="1">Semester 1</option>
+                <option value="2">Semester 2</option>
+                <option value="3">Semester 3</option>
+            </select>
+        </div>
+
+        <!-- Content Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Study Materials Section -->
+            <div class="col-span-1 md:col-span-2">
+                <h2 class="text-xl font-semibold mb-4">Recent Materials</h2>
+                <div class="space-y-4">
+                    <!-- Material Card -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-medium">Data Structures Notes</h3>
+                                <p class="text-sm text-gray-600">Computer Science • Semester 3</p>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-700">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Uploaded by Prof. Smith • 2 days ago</p>
+                    </div>
+
+                    <!-- More Material Cards -->
+                    <div class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-medium">Circuit Theory Practice Problems</h3>
+                                <p class="text-sm text-gray-600">Electrical Engineering • Semester 2</p>
+                            </div>
+                            <button class="text-blue-600 hover:text-blue-700">
+                                <i class="bi bi-download"></i>
+                            </button>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-2">Uploaded by Dr. Johnson • 5 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Discussion Board -->
+            <div class="col-span-1">
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold mb-4">Discussion Board</h2>
+                    <button id="newDiscussionBtn" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 mb-4">
+                        Start New Discussion
+                    </button>
+                    <div class="space-y-4">
+                        <!-- Discussion Thread -->
+                        <div class="discussion-card border rounded-lg p-3">
+                            <h3 class="font-medium">Help with Algorithm Analysis</h3>
+                            <p class="text-sm text-gray-600 mt-1">Need help understanding time complexity...</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <span class="text-xs text-gray-500">5 replies</span>
+                                <button class="text-blue-600 text-sm hover:text-blue-700">Join Discussion</button>
+                            </div>
+                        </div>
+
+                        <!-- More Discussion Threads -->
+                        <div class="discussion-card border rounded-lg p-3">
+                            <h3 class="font-medium">Project Group Formation</h3>
+                            <p class="text-sm text-gray-600 mt-1">Looking for team members for final project...</p>
+                            <div class="flex items-center justify-between mt-2">
+                                <span class="text-xs text-gray-500">3 replies</span>
+                                <button class="text-blue-600 text-sm hover:text-blue-700">Join Discussion</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Discussion Modal -->
+    <div id="discussionModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+            <div class="mt-3">
+                <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Start New Discussion</h3>
+                <form id="discussionForm">
+                    <input type="text" placeholder="Discussion Title" class="w-full px-3 py-2 border rounded-lg mb-3">
+                    <textarea placeholder="Description" class="w-full px-3 py-2 border rounded-lg mb-3 h-32"></textarea>
+                    <div class="flex justify-end space-x-3">
+                        <button type="button" id="cancelBtn" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300">Cancel</button>
+                        <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Post Discussion</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal Functionality
+        const modal = document.getElementById('discussionModal');
+        const newDiscussionBtn = document.getElementById('newDiscussionBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+        const discussionForm = document.getElementById('discussionForm');
+
+        newDiscussionBtn.onclick = function() {
+            modal.classList.remove('hidden');
+        }
+
+        cancelBtn.onclick = function() {
+            modal.classList.add('hidden');
+        }
+
+        discussionForm.onsubmit = function(e) {
+            e.preventDefault();
+            // Handle form submission here
+            modal.classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.classList.add('hidden');
+            }
+        }
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
